@@ -2,7 +2,8 @@
 	<head>
 	<link rel="stylesheet" type="text/css" href="forms.css"> 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<title>jQuery - Form Validator</title>
+
+	<title>jQuery</title>
 
 		
 	</head>
@@ -66,16 +67,15 @@
 			
 			
 			if (isEmail($("#email").val()) == false) {
-			
-				errorMessage+= "Your email address is not valid!";
+				errorMessage+= "Your email address is not valid! ";
 			}
 			
 			if ($.isNumeric($("#phone").val()) == false) {
 				errorMessage+= "Your phone number is not valid!";
 			}
-			
+	
 			if ($("#password").val() != $("#confirm-password").val()) {
-				errorMessage += "Your passwords don't match!";
+				errorMessage += "Your passwords don't match! ";
 			}
 			
 			if (errorMessage != "") {
@@ -84,7 +84,7 @@
 			
 			else {
 			
-			$("#successMessage").show();
+			$("#successMessage").fadeIn("slow");
 			$("#errorMessage").hide();
 			}
 		});
